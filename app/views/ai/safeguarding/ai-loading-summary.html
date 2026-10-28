@@ -1,0 +1,27 @@
+{% extends "layouts/ai-signed-in.html" %}
+
+{% block content %}
+<style>
+  .ai-loading-area { display: flex; min-height: 280px; align-items: center; justify-content: center; text-align: center; padding: 12px 15px; }
+  .ai-loading-inner { max-width: 650px; }
+  .ai-loading-spinner { width: 112px; height: 112px; margin: 0 auto 32px; border: 12px solid #dee0e2; border-bottom-color: #1d70b8; border-radius: 50%; animation: ai-spin 1s linear infinite; box-sizing: border-box; }
+  @keyframes ai-spin { to { transform: rotate(360deg); } }
+  .ai-loading-heading { margin: 0 0 15px; }
+  @media (prefers-reduced-motion: reduce) { .ai-loading-spinner { animation: none; } }
+</style>
+<main class="ai-loading-area" aria-label="Loading search information">
+  <div class="ai-loading-inner" role="status" aria-live="polite" aria-atomic="true">
+    <div class="ai-loading-spinner" aria-hidden="true"></div>
+    <h1 class="govuk-heading-l ai-loading-heading">Preparing safeguarding summary</h1>
+    <p class="govuk-body-l" id="ai-status">Reviewing search results...</p>
+  </div>
+</main>
+<script>
+(function () {
+  var status = document.getElementById('ai-status');
+  window.setTimeout(function () { status.textContent = 'Running the MoJ safeguarding model...'; }, 1500);
+  window.setTimeout(function () { status.textContent = 'Generating your case summary...'; }, 3000);
+  window.setTimeout(function () { window.location.replace('./summary'); }, 10000);
+}());
+</script>
+{% endblock %}

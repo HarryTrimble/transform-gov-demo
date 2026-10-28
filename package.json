@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "govuk-frontend": "5.8.0",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "sass": "^1.69.7"
+  }
+}

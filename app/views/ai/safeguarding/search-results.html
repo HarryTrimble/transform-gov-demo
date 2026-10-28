@@ -1,0 +1,88 @@
+{% extends "layouts/ai-signed-in.html" %}
+
+{% block pageTitle %}
+  Home - GOV.UK Proof
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-m">Safeguarding<span class="govuk-!-font-weight-regular"> | Aaron Higgs</span></h3>
+      <h1 class="govuk-heading-m">49 records likely relevant records</span></h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     <div class="govuk-summary-card">
+       <div class="govuk-summary-card__title-wrapper" style="background-color: transparent;">
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: left;">
+             Morning call
+         </h2>
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: right; text-align: right; margin-right: 0px;">
+             26 June
+         </h2>
+       </div>
+       <div class="govuk-summary-card__content" style="background: #323232; padding-top: 20px; padding-bottom: 20px;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px;"><a href="#">Aaron Higgs was unwell on 9 separate occasions in June</a></p>
+         <br>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="margin-bottom: 20px; margin-top: 2px; border-bottom: 2px solid #fff;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px; font-size: 16px;">'Aaron failed to come out of his cell this morning. He looked awful when we went to check in on him.'<br><br><a href="#" style="color: inherit; font-weight: 400;">View morning call entries</a>
+         </p>
+       </div>
+     </div>
+     <div class="govuk-summary-card">
+       <div class="govuk-summary-card__title-wrapper" style="background-color: transparent;">
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: left;">
+             Canteen register
+         </h2>
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: right; text-align: right; margin-right: 0px;">
+             17-25 June
+         </h2>
+       </div>
+       <div class="govuk-summary-card__content" style="background: #323232; padding-top: 20px; padding-bottom: 20px;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px;"><a href="#">Aaron Higgs may be not eating enough</a></p>
+         <br>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="margin-bottom: 20px; margin-top: 2px; border-bottom: 2px solid #fff;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px; font-size: 16px;">Absent from 11 of 21 meals in the last week<br><br><a href="#" style="color: inherit; font-weight: 400;">View canteen register</a>
+         </p>
+       </div>
+     </div>
+
+     <div class="govuk-summary-card">
+       <div class="govuk-summary-card__title-wrapper" style="background-color: transparent;">
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: left;">
+             Email attached
+         </h2>
+         <h2 class="govuk-summary-card__title" style="font-weight: 400; float: right; text-align: right; margin-right: 0px;">
+             15 July
+         </h2>
+       </div>
+       <div class="govuk-summary-card__content" style="background: #323232; padding-top: 20px; padding-bottom: 20px;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px;"><a href="#">Aaron Higgs was diagnosed with paranoia and anxiety</a></p>
+         <br>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="margin-bottom: 20px; margin-top: 2px; border-bottom: 2px solid #fff;">
+         <p id="ai-search-result-text" class="govuk-body" style="margin-bottom: 0px; font-size: 16px;">'Following our assessment with Aaron we can confirm...'<br><br><a href="#" style="color: inherit; font-weight: 400;">View email attachment</a></p>
+       </div>
+     </div>
+
+    </div>
+    <div class="govuk-grid-column-one-third" style="position: -webkit-sticky; /* Safari */ position: sticky; top: 30px;">
+      <form class="form" action="./ai-loading-summary" method="post">
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background: transparent; border: 2px solid #243746; color: #243746;">
+            Refine search
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background: transparent; border: 2px solid #243746; color: #243746;">
+            Import raw
+          </button>
+          <button id="ai-button" type="submit" class="govuk-button" data-module="govuk-button" style="border: 2px solid #243746; color: #243746;">
+            AI summarise
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+{% endblock %}

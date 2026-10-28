@@ -1,0 +1,40 @@
+{% extends "layouts/ai-signed-in.html" %}
+
+{% block pageTitle %}
+  Home - GOV.UK Proof
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-m">Safeguarding<span class="govuk-!-font-weight-regular"> | Aaron Higgs</span></h3>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group" style="margin-bottom: 0px;">
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint"  style="margin-bottom: 0px;   padding: 12px 20px;">Mr Higgs experiences intense emotional states of paranoia and anxiety that cause him to isolate himself for days on end.This may result in little or no intake of food or drink, which has previously left him too weak to look after himself.</textarea>
+      </div>
+     <div id="ai-summary" class="govuk-summary-card" style="margin-bottom: 0px; border-top: 0px solid black;">
+       <div class="govuk-summary-card__content" pad>
+         <p class="govuk-body" style="margin-bottom: 0px; color: #243746; font-size: 19px; text-align: center;">AI generated summary<span id="action-divider"></span><a href="/credentials/wallet" style="color: inherit;">Refine</a></p>
+       </div>
+     </div> 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <form class="form" action="./search-results" method="post">
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background: transparent; border: 2px solid #243746; color: #243746;">
+            Ask for check
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="background: transparent; border: 2px solid #243746; color: #243746;">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+{% endblock %}
